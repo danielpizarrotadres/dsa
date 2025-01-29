@@ -20,14 +20,20 @@ def fibonacci(num):
 # T = n
 
 def recursive_fibonacci(f, aux=1, prev=0, next=1, accum=""):
+    if f == 0:
+        return [0]
+    if f == 1:
+        return [0, 1]
+    if f == 2:
+        return [0, 1]
     newNext = prev + next
     newPrev = next
     aux = aux + 1
     newAccum = accum + " " + str(newNext)
-    if f > aux:
+    if f - 1 > aux:
         return recursive_fibonacci(f, aux, newPrev, newNext, newAccum)
     return "0 1"  + str(newAccum)
 
 if __name__ == '__main__':
-    print(fibonacci(2))
-    print(recursive_fibonacci(1))
+    print(fibonacci(10))
+    print(recursive_fibonacci(10))
