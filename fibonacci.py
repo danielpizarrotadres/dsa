@@ -15,12 +15,15 @@ def fibonacci(num):
 # T = 7 + n
 # T = n
 
-def recursive_fibonacci(f, aux=0, current=0, prev=0, next=0):
+def recursive_fibonacci(f, aux=0, prev=0, next=1, accum=""):
+    newNext = prev + next
+    newPrev = next
     aux = aux + 1
+    newAccum = accum + " " + str(newNext)
     if f > aux:
-        return True
-    return recursive_fibonacci(f, aux)
+        return recursive_fibonacci(f, aux, newPrev, newNext, newAccum)
+    return "0 1"  + str(newAccum)
 
 if __name__ == '__main__':
     print(fibonacci(7))
-    print(recursive_fibonacci(5))
+    print(recursive_fibonacci(7))
