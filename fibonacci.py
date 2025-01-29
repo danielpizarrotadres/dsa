@@ -1,12 +1,12 @@
 def fibonacci(num):
-    res = [0, 1] # 1
-    count = 1 # 1
     if num == 0:
         return [0]
     if num == 1:
         return res
     if num == 2:
-        return res 
+        return res
+    res = [0, 1] # 1
+    count = 1 # 1
     while (num - 1 > count): # n
         prevPos = count - 1 # 1
         nextPos = count # 1
