@@ -15,8 +15,12 @@ def fibonacci(num):
 # T = 7 + n
 # T = n
 
+def recursive_fibonacci(f, aux=0, current=0, prev=0, next=0):
+    aux = aux + 1
+    if f > aux:
+        return True
+    return recursive_fibonacci(f, aux)
+
 if __name__ == '__main__':
-    result = fibonacci(5)
-    expect = [0, 1, 1, 2, 3, 5]
-    success = result == expect
-    print(success)
+    print(fibonacci(7))
+    print(recursive_fibonacci(5))
