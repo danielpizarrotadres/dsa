@@ -9,7 +9,7 @@ def lowest(values):
         current = values[aux - 1]
         next = values[aux]
         if current < next:
-            lowest = current
+           lowest = current
         aux = aux + 1
     return lowest
 
