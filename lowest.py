@@ -4,12 +4,14 @@ def lowest(values):
     if len(values) == 1:
         return values[0]
     lowest = 0
-    aux = 0
+    aux = 1
     while len(values) > aux:
         current = values[aux - 1]
         next = values[aux]
         if current < next:
            lowest = current
+        else:
+           lowest = next
         aux = aux + 1
     return lowest
 
