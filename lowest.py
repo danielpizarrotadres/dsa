@@ -23,12 +23,12 @@ def lowest_index(values):
     lowest_index = 0
     aux = 1
     while len(values) > aux:
-        current_index = aux - 1
-        next_index = aux
-        if current_index < next_index:
-           lowest_index = current_index
+        current = values[aux - 1]
+        next = values[aux]
+        if current < next:
+           lowest_index = aux - 1
         else:
-           lowest_index = next_index
+           lowest_index = aux
         aux = aux + 1
     return lowest_index
 
