@@ -1,19 +1,17 @@
-def lowest_index(values):
-    if len(values) == 0:
-        return None
-    if len(values) == 1:
-        return 0
-    lowest_index = 0
-    aux = 1
-    while len(values) > aux:
-        current = values[aux - 1] 
-        next = values[aux]
-        if current < next:
-           lowest_index = aux - 1
-        else:
-           lowest_index = aux
-        aux = aux + 1
-    return lowest_index
+from lowest import lowest_index
+from highest import highest
 
+def bubble_sort(nums):
+    numbers = nums
+    temp = []
+    index = 0
+    while len(nums) > 0:
+        low_index = lowest_index(nums)
+           print('Printing low_index: ' + str(low_index))
+        nums.pop(low_index)
+        index = index + 1
+        temp.append()
+    return nums
+ 
 if __name__ == '__main__':
-    print(lowest_index([11, 12]))
+    print(bubble_sort([7, 3, 5, 8, 6]))
