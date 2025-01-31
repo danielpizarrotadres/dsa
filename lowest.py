@@ -24,7 +24,7 @@ def lowest_index(values):
     aux = 1
     while len(values) > aux:
         current_index = aux - 1
-        next_inext = aux
+        next_index = aux
         if current_index < next_index:
            lowest_index = current_index
         else:
