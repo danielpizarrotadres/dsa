@@ -17,21 +17,21 @@ def lowest(values):
 
 def lowest_index(values):
     if len(values) == 0:
-        return 0
+        return None
     if len(values) == 1:
-        return values[0]
+        return 0
     lowest_index = 0
     aux = 1
     while len(values) > aux:
         current = values[aux - 1]
         next = values[aux]
-        if current < next:
+        if current < next and current <= values[lowest_index]: 
            lowest_index = aux - 1
-        else:
-           lowest_index = aux
+        if next < current and next <= values[lowest_index]:
+           lowest_index = aux 
         aux = aux + 1
     return lowest_index
 
 if __name__ == '__main__':
-    print(lowest([11, 12, 15, 1]))
-    print(lowest_index([11, 12, 15, 1]))
+    print(lowest([7, 3, 5, 8, 6]))
+    print(lowest_index([7, 3, 5, 8, 6]))
