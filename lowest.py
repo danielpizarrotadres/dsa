@@ -8,10 +8,15 @@ def lowest(values):
     while len(values) > aux:
         current = values[aux - 1]
         next = values[aux]
-        if current < next:
-           lowest = current
+
+        if aux == 1:
+            if current < next:
+               lowest = current
+            else:
+               lowest = next
         else:
-           lowest = next
+            if current < lowest:
+                lowest = current
         aux = aux + 1
     return lowest
 
@@ -33,5 +38,5 @@ def lowest_index(values):
     return lowest_index
 
 if __name__ == '__main__':
-    print(lowest([7, 3, 5, 8, 6]))
+    print(lowest([6, 9, 10, 15, 1, 17, 7, 5, 2, 3]))
     print(lowest_index([7, 3, 5, 8, 6]))
