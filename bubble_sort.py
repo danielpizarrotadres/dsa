@@ -6,11 +6,8 @@ def bubble_sort(nums):
     temp = []
     aux = 0
     while len(nums) > 0:
-        print("Printing current nums: ", nums)
         lowest_idx = lowest_index(nums)
-        print("Printing lowest_idx: ", lowest_idx)
         temp.insert(aux, nums[lowest_idx])
-        print("Printing temp: ", temp)
         nums.pop(lowest_idx)
         aux = aux + 1
     return temp
