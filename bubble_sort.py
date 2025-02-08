@@ -1,6 +1,7 @@
 from lowest import lowest_index
 from highest import highest
 
+# This code depends on `lowest_index` and `highest` functions
 # def bubble_sort(nums):
 #     numbers = nums
 #     temp = []
