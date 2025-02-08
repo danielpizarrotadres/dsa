@@ -10,7 +10,9 @@ def bubble_sort(nums):
         lowest_idx = lowest_index(nums)
         print("Printing lowest_idx: ", lowest_idx)
         temp.insert(aux, nums[lowest_idx])
+        print("Printing temp: ", temp)
         nums.pop(lowest_idx)
+        aux = aux + 1
     return temp
  
 if __name__ == '__main__':
