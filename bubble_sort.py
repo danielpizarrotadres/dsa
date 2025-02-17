@@ -2,6 +2,7 @@ from lowest import lowest_index
 from highest import highest
 
 # This code depends on `lowest_index` and `highest` functions
+# Also this algorithm is selection_sort because it finds the lowest value
 # def bubble_sort(nums):
 #     numbers = nums
 #     temp = []
