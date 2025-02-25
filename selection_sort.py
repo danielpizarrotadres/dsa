@@ -12,11 +12,9 @@ def selection_sort(nums):
                 lowest_pos = index
         sorted_nums.append(lowest_val)
         temp.pop(lowest_pos)
-
         if len(temp) > 0:
             lowest_val = temp[0]
             lowest_pos = 0
-        
         aux += 1
     return sorted_nums
 
