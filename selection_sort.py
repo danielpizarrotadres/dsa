@@ -1,3 +1,5 @@
+// This code should be improved
+
 def selection_sort(nums):
     sorted_nums = []
     temp = nums
