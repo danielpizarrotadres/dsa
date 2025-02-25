@@ -1,4 +1,6 @@
-// This code should be improved
+"""
+This code should be improved, it works but there are unnecessary complexity
+"""
 
 def selection_sort(nums):
     sorted_nums = []
