@@ -17,12 +17,9 @@ from highest import highest
 def bubble_sort(nums):
     for i, num in enumerate(nums):
         for j in range(len(nums) - 1):
-            aux = nums[j]
             if nums[j] > nums[j+1]:
-                aux = nums[j]
-                if nums[j] > nums[j+1]:
-                    nums[j], nums[j+1] = nums[j+1], nums[j]
+                nums[j], nums[j+1] = nums[j+1], nums[j]
     return nums
-    
+
 if __name__ == '__main__':
     print(bubble_sort([7, 3, 5, 8, 6]))
