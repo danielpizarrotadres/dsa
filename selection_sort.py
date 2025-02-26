@@ -22,6 +22,17 @@ def selection_sort(nums):
         aux += 1
     return sorted_nums
 
+def sort_selection(nums):
+    for index, num in enumerate(nums):
+        print(f'Current [{index}/{num}]')
+
+        for item in range(index, len(nums)):
+            print(item)
+
+        print('\n')
+    return nums
+
 if __name__ == '__main__':
     nums = [2, 4, 100, 1, 5, 101]
     print(selection_sort(nums))
+    print(sort_selection(nums))
