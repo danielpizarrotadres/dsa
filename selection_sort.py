@@ -18,16 +18,6 @@ def selection_sort(nums):
         aux += 1
     return sorted_nums
 
-# def sort_selection(nums):
-#     for index, num in enumerate(nums):
-#         print(f'Current [{index}/{num}]')
-
-#         for item in range(index, len(nums)):
-#             print(item)
-
-#         print('\n')
-#     return nums
-
 def sort_selection(nums):
     i = 0
     for num in nums:
