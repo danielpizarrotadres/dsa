@@ -31,12 +31,10 @@ def selection_sort(nums):
 def sort_selection(nums):
     i = 0
     for num in nums:
-        print(f'Current [{i}/{num}]')
         lowest_val = num
         lowest_pos = i
         j = i
         for item in range(i,len(nums)-1):
-            print(item)
             if nums[item] < nums[item+1] and nums[item] <= lowest_val:
                 lowest_val = nums[item]
                 lowest_pos = j
