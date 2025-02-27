@@ -1,6 +1,3 @@
-"""
-This code should be improved, it works but there are unnecessary complexity
-"""
 def selection_sort(nums):
     sorted_nums = []
     temp = nums
@@ -35,28 +32,21 @@ def sort_selection(nums):
     i = 0
     for num in nums:
         print(f'Current [{i}/{num}]')
-
         lowest_val = num
         lowest_pos = i
-
-        print(f'Printing lowest_val at the top: {lowest_val}')
-        j = 0
+        j = i
         for item in range(i,len(nums)-1):
             print(item)
             if nums[item] < nums[item+1] and nums[item] <= lowest_val:
                 lowest_val = nums[item]
                 lowest_pos = j
             j+=1
-
-        print(f'Printing lowest_val: {lowest_val}')
-        print(f'Printing nums: {nums}')
-        nums[lowest_pos] = nums[i]
-        nums[i] = lowest_val
-        print(f'Printing after nums: {nums}')
+        nums.pop(lowest_pos)
+        nums.insert(i, lowest_val)
         i+=1
     return nums
 
 if __name__ == '__main__':
     nums = [2, 4, 100, 1, 5, 101]
-    # print(selection_sort(nums))
+    print(selection_sort(nums))
     print(sort_selection(nums))
