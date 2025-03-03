@@ -38,3 +38,8 @@ if __name__ == '__main__':
     nums = [2, 4, 100, 1, 5, 101]
     print(selection_sort(nums))
     print(sort_selection(nums))
+
+    # Test with errors
+    nums = [5, 4, 3, 2, 1]
+    print(selection_sort(nums))
+    print(sort_selection(nums))
