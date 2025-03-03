@@ -23,3 +23,4 @@ def bubble_sort(nums):
 
 if __name__ == '__main__':
     print(bubble_sort([7, 3, 5, 8, 6]))
+    print(bubble_sort([5, 4, 3, 2, 1]))
