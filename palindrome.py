@@ -1,3 +1,6 @@
+"""
+    This implementation works only for words, it doesn't support palindrome phrases
+"""
 def is_palindrome(word):
     word_backward = ''
     i = 0
