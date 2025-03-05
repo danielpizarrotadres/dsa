@@ -10,9 +10,12 @@ def insertion_sort(nums):
         i += 1
     return nums
 
+def sort_insertion(nums):
+    i = 0
+    while len(nums)-1 >= i:
+        print(f'Index: {i}, Value: {nums[i]}: {nums[0:i+1]} ')
+        i+=1
+    return nums
+
 if __name__ == '__main__':
-    print(insertion_sort([2, 4, 100, 1, 5, 101]))
-    print(insertion_sort([3, 2, 1, 5, 4]))
-    print(insertion_sort([1, 2, 3, 4, 5]))
-    print(insertion_sort([5, 4, 3, 2, 1])) # Fails
-    print(insertion_sort([3, -1, 2, -3, 1])) # Fails
+    print(sort_insertion([5, 4, 3, 2, 1])) # Fails
