@@ -1,7 +1,7 @@
 def loop_reverse(nums):
     for index in range(len(nums)):
         last_value = nums[len(nums)-1 - index]
-        print(f'Current index: {index}: last_value: {last_value}')
+        print(f'Current index: {index}, last_value: {last_value}, index of last_value: {len(nums)-1 - index}')
     return nums
 
 if __name__ == '__main__':
