@@ -1,45 +1,26 @@
 def selection_sort(nums):
-    sorted_nums = []
-    temp = nums
-    aux = 0
-    lowest_val = nums[0]
-    lowest_pos = 0
-    while len(nums) > aux:
-        temp = temp[0:len(temp)]
-        for index in range(len(temp)-1):
-            if temp[index] < temp[index+1] and temp[index] <= lowest_val:
-                lowest_val = temp[index]
-                lowest_pos = index
-        sorted_nums.append(lowest_val)
-        temp.pop(lowest_pos)
-        if len(temp) > 0:
-            lowest_val = temp[0]
-            lowest_pos = 0
-        aux += 1
-    return sorted_nums
-
-def sort_selection(nums):
+    temp = nums.copy()
     i = 0
-    for num in nums:
-        lowest_val = num
-        lowest_pos = i
-        j = i
-        for item in range(i,len(nums)-1):
-            if nums[item] < nums[item+1] and nums[item] <= lowest_val:
-                lowest_val = nums[item]
-                lowest_pos = j
+    while len(nums) > i:
+        j = 0
+        lowest_value = temp[0]
+        lowest_index = 0
+        while len(temp)-1 > j:
+            if temp[j] > temp[j+1] and temp[j+1] <= lowest_value:
+                lowest_value = temp[j+1]
+                lowest_index = j+1
             j+=1
-        nums.pop(lowest_pos)
-        nums.insert(i, lowest_val)
+        temp.pop(lowest_index)
+        nums[i] = lowest_value
         i+=1
     return nums
 
 if __name__ == '__main__':
-    nums = [2, 4, 100, 1, 5, 101]
-    print(selection_sort(nums))
-    print(sort_selection(nums))
-
-    # Test with errors
-    nums = [5, 4, 3, 2, 1]
-    print(selection_sort(nums))
-    print(sort_selection(nums))
+    print(f'[5, 4, 3]/{selection_sort([5, 4, 3])}')
+    print(f'[5, 3, 4]/{selection_sort([5, 3, 4])}')
+    print(f'[-5, -3, 4]/{selection_sort([-5, -3, 4])}')
+    print(f'[3, 1, 2]/{selection_sort([3, 1, 2])}')
+    print(f'[4, 3, 2, 1]/{selection_sort([4, 3, 2, 1])}')
+    print(f'[1, 2, 3, 4] -> {selection_sort([1, 2, 3, 4])}')
+    print(f'[5, 1, 4, 2, 8] -> {selection_sort([5, 1, 4, 2, 8])}')
+    print(f'[10, -1, 2, 5, 0] -> {selection_sort([10, -1, 2, 5, 0])}')
