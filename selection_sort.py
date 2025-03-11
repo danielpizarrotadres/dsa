@@ -15,6 +15,8 @@ def selection_sort(nums):
         i+=1
     return nums
 
+# TODO: Implement swap: https://www.w3schools.com/dsa/dsa_algo_selectionsort.php
+
 if __name__ == '__main__':
     print(f'[5, 4, 3]/{selection_sort([5, 4, 3])}')
     print(f'[5, 3, 4]/{selection_sort([5, 3, 4])}')
