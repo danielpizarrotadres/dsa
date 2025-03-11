@@ -17,6 +17,14 @@ def selection_sort(nums):
 
 def selection_sort_swaping(nums):
     # TODO: Implement swap: https://www.w3schools.com/dsa/dsa_algo_selectionsort.php
+    i = 0
+    while len(nums) > i:
+        lowest_index = i
+        lowest_value = nums[i]
+        for j in range(i, len(nums)-1):
+            # TODO: Add comparison between current j and current j+1
+            pass
+        i += 1
     return nums
 
 if __name__ == '__main__':
