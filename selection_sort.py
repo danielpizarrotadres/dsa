@@ -15,7 +15,9 @@ def selection_sort(nums):
         i+=1
     return nums
 
-# TODO: Implement swap: https://www.w3schools.com/dsa/dsa_algo_selectionsort.php
+def selection_sort_swaping(nums):
+    # TODO: Implement swap: https://www.w3schools.com/dsa/dsa_algo_selectionsort.php
+    return nums
 
 if __name__ == '__main__':
     print(f'[5, 4, 3]/{selection_sort([5, 4, 3])}')
@@ -26,3 +28,4 @@ if __name__ == '__main__':
     print(f'[1, 2, 3, 4] -> {selection_sort([1, 2, 3, 4])}')
     print(f'[5, 1, 4, 2, 8] -> {selection_sort([5, 1, 4, 2, 8])}')
     print(f'[10, -1, 2, 5, 0] -> {selection_sort([10, -1, 2, 5, 0])}')
+    print(f'[10, -1, 2, 5, 0] -> {selection_sort_swaping([10, -1, 2, 5, 0])}')
