@@ -1,7 +1,4 @@
-"""
-    This implementation works only for words, it doesn't support palindrome phrases
-"""
-def is_palindrome_word(word):
+def is_palindrome(word):
     word_backward = ''
     i = 0
     while len(word) > i:
@@ -12,8 +9,8 @@ def is_palindrome_word(word):
     return False
 
 if __name__ == '__main__':
-    print(is_palindrome_word('ana'))
-    print(is_palindrome_word('madam'))
-    print(is_palindrome_word('hello'))
-    print(is_palindrome_word('a'))
-    print(is_palindrome_word(''))
+    print(is_palindrome('ana'))
+    print(is_palindrome('madam'))
+    print(is_palindrome('hello'))
+    print(is_palindrome('a'))
+    print(is_palindrome(''))
