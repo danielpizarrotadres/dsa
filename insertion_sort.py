@@ -1,9 +1,6 @@
 def insertion_sort(nums):
-    i = 0
-    while len(nums) > i:
-        temp = nums[:i+1]
-        print(f'Current index: {i}, temp: {temp}')
-        i += 1
+    for i in range(len(nums)-1):
+        next = nums[i+1]
     return nums
 
 if __name__ == '__main__':
