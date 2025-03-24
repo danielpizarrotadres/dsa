@@ -7,3 +7,13 @@
 # 4.1- If current number is greater than `pivot` and 
 # 4.2- If curret number is greater than next number
 # 5- If both conditions apply, swap current number with next number
+
+def quick_sort(nums):
+    for index in range(1, len(nums)-1):
+        current = nums[index]
+        previous = nums[index-1]
+        print(f'Printing index: {index} Printing current: {current} Printing previous {previous}')
+    return nums
+
+if __name__ == '__main__':
+    print(f'[4, 13, 2, 3, 10, 6, 1, 5]/{quick_sort([4, 13, 2, 3, 10, 6, 1, 5])}')
