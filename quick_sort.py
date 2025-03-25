@@ -6,7 +6,7 @@
 # 4- For each number, validate:
 # 4.1- If current number is greater than `pivot` and 
 # 4.2- If curret number is greater than next number
-# 5- If both conditions apply, swap current number with next number
+# 5- Swap doesn't work, I should use the `remove` and `insert` approach
 
 def quick_sort(nums):
     for index in range(1, len(nums)-1):
